@@ -1,0 +1,27 @@
+<button class="btn-new" (click)="topost()" >Post New Stagiaire</button>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (stagiaire of stagiaires ; track $index) {
+        <tr>
+            <td>{{stagiaire.name}}</td>
+            <td>{{stagiaire.email}}</td>
+            <td>{{stagiaire.phone}}</td>
+            <td>
+                <button class="btn-update" (click)="toupdate(stagiaire.id)">Update</button>
+
+                <button class="btn-delete" (click)="deleteStagiaire(stagiaire.id)">Delete</button>
+            </td>
+            
+        </tr>
+    }
+    </tbody>
+</table>
+

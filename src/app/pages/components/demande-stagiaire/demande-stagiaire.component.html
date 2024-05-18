@@ -1,0 +1,35 @@
+<form [formGroup]="demandeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" formControlName="nom" required>
+  </div>
+  <div>
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" formControlName="prenom" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+  </div>
+  <div>
+    <label for="telephone">Téléphone:</label>
+    <input type="text" id="telephone" formControlName="telephone" required>
+  </div>
+  <div>
+    <label for="debutStage">Début du stage:</label>
+    <input type="date" id="debutStage" formControlName="debutStage">
+  </div>
+  <div>
+    <label for="finStage">Fin du stage:</label>
+    <input type="date" id="finStage" formControlName="finStage">
+  </div>
+  <div>
+    <label for="filiere">Filière:</label>
+    <input type="text" id="filiere" formControlName="filiere" required>
+  </div>
+  <div>
+    <label for="centre">Centre:</label>
+    <input type="text" id="centre" formControlName="centre">
+  </div>
+  <button type="submit" [disabled]="!demandeForm.valid">Envoyer</button>
+</form>

@@ -1,0 +1,33 @@
+<table>
+    <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Début du stage</th>
+          <th>Fin du stage</th>
+          <th>Filière</th>
+          <th>Centre</th>
+        </tr>
+      </thead>
+    <tbody>
+        @for (demande of demandesStagiaires ; track $index) {
+         <tr>
+            <td>{{ demande.nom }}</td>
+            <td>{{ demande.prenom }}</td>
+            <td>{{ demande.email }}</td>
+            <td>{{ demande.telephone }}</td>
+            <td>{{ demande.debutStage }}</td>
+            <td>{{ demande.finStage }}</td>
+            <td>{{ demande.filiere }}</td>
+            <td>{{ demande.centre }}</td> 
+            <td><button (click)="telechargerPDF($index)">Télécharger PDF</button></td> 
+
+          </tr> 
+           
+        }
+    </tbody>
+</table>
+
+        

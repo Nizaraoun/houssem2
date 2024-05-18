@@ -1,0 +1,24 @@
+
+<div class="container">
+    <h2>Register</h2>
+    <div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" [formControl]="nameControl">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" [formControl]="emailControl">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password" [formControl]="passwordControl">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" [formControl]="phoneControl">
+      </div>
+      <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  

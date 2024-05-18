@@ -1,0 +1,1 @@
+export * from '../post-stagiaire/post-stagiaire.component'
