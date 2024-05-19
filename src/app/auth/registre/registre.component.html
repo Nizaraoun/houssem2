@@ -18,6 +18,10 @@
         <label for="phone">Phone</label>
         <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" [formControl]="phoneControl">
       </div>
+      <div class="mt-2">you are a member? <a (click)="goToLogin()">Login</a></div>
+<br>
+
+
       <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
     </div>
   </div>

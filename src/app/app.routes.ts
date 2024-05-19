@@ -11,7 +11,7 @@ export const APP_ROUTES: Routes = [
 		loadChildren: () => import('./pages/pages-routes'),
 	},
 	{
-		path: '**', redirectTo: 'auth', pathMatch: 'full',
+		path: '**', redirectTo: 'home', pathMatch: 'full',
 	},
  
 

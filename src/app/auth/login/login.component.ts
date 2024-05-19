@@ -27,7 +27,7 @@ export class LoginComponent {
       (data) => {
         if (data) {
 
-          this.router.navigate(['dashboard', 'stagiaire']);
+          this.router.navigate(['/home']);
           alert('login success !!');
         } else {
           alert('votre mot de passe est fausse! verifier voter mot de passe');
@@ -41,18 +41,7 @@ export class LoginComponent {
 
   // hedha lgita makhdoum 
   onSubmit() {
-    const email = this.emailControl.value;
-    const password = this.passwordControl.value;
-    this.stagiaireService.getDataByEmail(email).subscribe(
-      (data) => {
-        if (data.password == password) {
-          this.router.navigate(['dashboard','stagiaire']);
-          alert('login success !!');
-        } else {
-          alert('votre mot de passe est fausse! verifier voter mot de passe');
-        }
-      },
-      (error) => {}
-    );
+    this.router.navigate(['/registre']);
+
   }
 }

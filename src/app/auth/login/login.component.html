@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container background-image">
     <h2>Login</h2>
     <div>
       <div class="form-group">
@@ -9,6 +9,10 @@
         <label for="password">Password</label>
         <input type="password" id="password" class="form-control" placeholder="Enter your password" [formControl]="passwordControl">
       </div>
-      <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+      <div class="mt-2">Not a member? <a (click)="onSubmit()">Register</a></div>
+<br>
+      <button (click)="login()" class="btn btn-primary">Login</button>
+
     </div>
+    
   </div>
